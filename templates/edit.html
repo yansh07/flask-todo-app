@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Edit ToDo{% endblock %}
+
+{% block content %}
+<div class="mt-5 d-flex justify-content-center">
+  <div class="p-4 border-0 shadow-lg card rounded-4" style="width: 28rem; background: linear-gradient(145deg, #f0f0f0, #ffffff);">
+    <h3 class="mb-4 text-center">Edit Todo 📝</h3>
+    <form method="POST">
+      <div class="mb-3">
+        <label for="title" class="form-label fw-semibold">Title</label>
+        <input type="text" class="p-2 form-control" id="title" name="title" value="{{ todo.title }}" required>
+      </div>
+      <div class="gap-2 d-grid">
+        <button type="submit" class="btn btn-success">Update</button>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -20,8 +20,6 @@ instance
 /app.db
 ./app.db
 app.db
-templates
-/templates
 __pycache__/
 *.pyc
 instance/
